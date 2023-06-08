@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+}
+.logo {
+    font-size:large;
+    display: flex;
+    height: 80px;
+    float: left;
+}
+.busqueda{
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.header {
+  font-size:2rem;
+  grid-area: header;
+  background-color: #d8dadf;
+  text-align: center;
+  display:flex;
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: #979797;
+  padding: 5px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #fdcfcf;
+}
+.User {
+    padding: 1px;
+}
+
+.main {
+  grid-area: main;
+  background-color: #f5f5f5;
+}
+.users {
+    margin: 0px;
+    height: 100%;
+}
+.filtroHombre{
+    background-image: url(../img/masculino.png);
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+}
+.filtroMujer{
+    background-image: url(../img/femenino.png);
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+}
+.card {
+    background-color: rgb(171, 164, 162);
+    width: max-content;
+    padding: 10px;
+    margin: 10px;
+    text-align: justify;
+    border-radius: 8px;
+    display: inline-block;
+
+}
+.panel {
+    width: 100%;
+    display: block;
+    height:auto;
+}
+.sexo {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #8c96a0;
+}
+.info{
+    background-color: #f5f5f5;
+    border-radius: 3px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header"  100px
+    "navbar"  min-content
+    "main"    auto
+    "sidebar" 100px;
+}
+
+@media (min-height: 600px) {
+  .grid-container {
+
+    grid-template:
+      "header  header" 100px
+      "navbar  navbar" min-content
+      "sidebar main"   auto /
+      200px    auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template:
+      "header  header"  100px
+      "navbar  main  " auto /
+      200px;
+  }
+  
+}
+.regresar{
+  background-color: red;
+}
